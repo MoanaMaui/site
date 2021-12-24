@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style>
+     * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+     }
+         form {
+         padding: 30px;
+         background-color: #fff;
+         box-shadow:2px 2px 10px rgba(0,0,0,0.2);
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         width: 80%;
+         transform: translate(-50%, -50%);
+         }
+         form>p{
+           font-size: 20px;
+           font-family: Arial, Helvetica, sans-serif;
+           
+         }
+     
+     form input, textarea, button {
+      width: 300px;
+      outline: none;
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: 5px;
+     margin: 10px 0;
+     }
+     input {
+      padding:0 20px;
+      font-size: 15px;
+      height: 40px;
+      
+     }
+     textarea {
+      height: 100px;
+      padding:30px 20px;
+     }
+     button {
+      height: 40px;
+      background-color: steelblue;
+      color: white;
+      font-size: 15px;
+     }
+    </style>
+</head>
+<body>
+  <div class="log_inform">
+ <center>
+ <form action="" method="post">
+   <p>Sign-up</p>
+  <input required type="" placeholder="Name"><br>
+  <input required type="" placeholder="Email">
+    <br>
+  <input required type="password" placeholder="Enter Password">
+      <br>
+  <input required type="password" placeholder="Confirm Password">
+        <br>
+<button type="submit">Submit</button>
+ </form>
+  </center>
+  </div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+let form = document.forms[0];
+let input = form.querySelectorAll('input')
+let msgBox = form.querySelector('textarea')
+form.addEventListener('submit', function(e) {
+ e.preventDefault();
+ emailjs.init("user_0G08G2DXFcLZ6WywjCvWh");
+ let templateParams = {
+   to_email: input[1].value,
+    to_name: input[0].value
+  };
+  emailjs.send('service_27pgblx','template_dlw4n95', templateParams)
+  .then(res => console.log(`Message: ${res.text}`))
+  .catch(err => console.error(err));
+})
+</script>
+</body>
+</html>

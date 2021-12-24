@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width = device-width, initial-scale = 1">
+      <title>Moynsa Hotel</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <style>
+       * {
+         padding: 0;
+         margin: 0;
+         box-sizing: border-box;
+       } 
+@media(min-width:360px){
+       body {
+         background: #f2f2f2;
+         width: 100%;
+       }
+       .top_nav {
+         position: fixed;
+         top: 0;
+         left: 0;
+         padding:20px;
+         width: 100%;
+         background: #fff;
+         box-shadow: 0 3px 20px rgba(0,0,0,0.1);
+         display: flex;
+         flex-direction:row;
+         line-height: 20px;
+       }
+       .top_nav > .menu_btn {
+         position: absolute;
+         height: 3px;
+         width: 25px;
+         background-color: #003;
+         box-shadow: 0 7px 0 #003,
+          0 -7px 0 #003,
+          0 -7px 0 #003;
+  
+  
+         right: 30px;
+         top: 50%;
+         transform: translateY(-50%);
+         border-radius: 2px;
+       }
+       .side_nav {
+         height: 50vh;
+         width: 80%;
+         background-color:white;
+          box-shadow: 0 3px 20px rgba(0,0,0,0.1);
+        z-index: 1;
+         position:  fixed;
+         left:-80vw;
+         top:10%;
+         transition: all 0.4s ease-in-out;
+       }
+       .active {
+        left:10%;
+       }
+       ul>li{
+       list-style: none;
+       margin:10px;
+       }
+       .top_nav>ul{
+       display:flex;
+       flex-direction:row;
+       }
+         .side{
+         line-height:25px;
+         padding:10px;
+         text-align: center;
+         margin-top: 25px;
+         text-decoration: none;
+         list-style: none;
+         }
+       #log{
+       float:right;
+       position: fixed;
+       right:15%;
+       }
+       .logo{
+       font-family: cursive;
+       font-size:20px;
+       }
+
+  .promo{
+    height:70vh;
+    width:80%;
+    background:#fff;
+    box-shadow: 3px 0 20px rgba(0,0,0,0.1);
+    margin:10%;
+  }
+ .promo-container{
+   margin-top:10%;
+   display:flex;
+   flex-direction: column;
+ }
+ .promo-container1{
+   display:flex;
+   flex-direction: column;
+ }
+  h3{
+    text-align: center;
+    color:steelblue;
+  }
+  .par{
+    font-size:15px;
+    text-align: center;
+  }
+  .btn{
+    background:steelblue;
+    align-content:center;
+    height:6vh;
+    width:30%;
+    margin-top:20%;
+    color:white;
+    margin-left:35%;
+  }
+  .footer{
+    height:50vh;
+    width:100%;
+    background-color: steelblue;
+  }
+    .footer>p{
+    text-align:center;
+    color:white;
+    font-size: 15px;
+    margin-top:10px;
+    padding:6px;
+    }
+    h2{
+    text-align:center;
+    color:white;
+    line-height:25px;
+    font-size: 15px;
+    }
+
+  .sign_up{
+    list-style: none;
+    font-size:11px;
+  }
+  
+  .close{
+    width:10vw;
+    background-color:#fff;
+    border:none;
+    position:relative;
+    float:right;
+    padding:10px;
+    font-size:24px;
+  }
+  #fb{
+    font-size:25px;
+    text-align:center;
+    color:#fff;
+  }
+  #mail{
+   font-size:25px;
+   text-align:center;
+   color:#fff;
+  }
+  #credit{
+    font-size: 15px;
+    text-align:center;
+    color:#fff;
+  }
+   ul>li>a{
+   text-decoration: none;
+   }
+   button>a{
+   text-decoration: none;
+   color:white;
+   }
+ }
+ @media(min-width:980px){
+   body {
+         background: #f2f2f2;
+         width: 100%;
+       }
+       .top_nav{
+         position: fixed;
+         top: 0;
+         left: 0;
+         padding:20px;
+         width: 100%;
+         background: #fff;
+         box-shadow: 0 3px 20px rgba(0,0,0,0.1);
+         display: flex;
+         flex-direction:row;
+         height: 8vh;
+         line-height: 20px;
+       }
+       .top_nav > .menu_btn {
+         position: absolute;
+         height: 3px;
+         width: 25px;
+         background-color: #003;
+         box-shadow: 0 7px 0 #003,
+          0 -7px 0 #003,
+          0 -7px 0 #003;
+  
+  
+         right: 30px;
+         top: 50%;
+         transform: translateY(-50%);
+         border-radius: 2px;
+       }
+       .side_nav {
+         height: 25vh;
+         width:60%;
+         margin-left:10%;
+         background-color:white;
+          box-shadow: 0 3px 20px rgba(0,0,0,0.1);
+        z-index: 1;
+         position:  fixed;
+         left:-80vw;
+         top:10%;
+         transition: all 0.4s ease-in-out;
+       }
+       .active {
+        left:10%;
+       }
+       .before{
+         left:-80vw;
+       }
+       ul>li{
+       list-style: none;
+       margin:10px;
+       }
+       .top_nav>ul{
+       display:flex;
+       flex-direction:row;
+       }
+         .side{
+         line-height:25px;
+         padding:15px;
+         text-align:center;
+         margin-top: 25px;
+         text-decoration: none;
+         list-style: none;
+         font-size: 30px;
+         }
+       #log{
+       float:right;
+       position: fixed;
+       right:15%;
+       margin-top:20px;
+       font-size:30px;
+       }
+       .logo{
+       font-family: cursive;
+       font-size:40px;
+       margin-top:22px;
+       margin-left:20px;
+       }
+ .promo{
+ height:50vh;
+ width:90%;
+ background:#fff;
+ box-shadow: 3px 0 20px rgba(0,0,0,0.1);
+ margin:1%;
+ margin-top: 10%;
+ }
+ .promo>img{
+ height:20vh;
+ width:auto;
+ }
+ .promo-container{
+ display:flex;
+ flex-direction:row;
+ width: 100%;
+ }
+ .promo-container1{
+ display:flex;
+ flex-direction:row;
+ width: 100%;
+ }
+ .promo-container1>.promo1{
+ height:50vh;
+ width:90%;
+ background:#fff;
+ box-shadow: 3px 0 20px rgba(0,0,0,0.1);
+ margin:1%;
+ }
+ .promo>img{
+ height:20vh;
+ width:auto;
+ }
+  h3{
+    text-align: center;
+    color:steelblue;
+    font-size: 1.5em;
+  }
+  .par{
+    font-size:25px;
+    text-align: center;
+  }
+  .btn{
+    background:steelblue;
+    align-content:center;
+    height:6vh;
+    width:60%;
+    margin-top:1%;
+    color:white;
+    margin-left:20%;
+    font-size: 25px;
+    
+  }
+  .footer{
+    height:50vh;
+    width:100%;
+    background-color: steelblue;
+  }
+  .footer>p{
+    text-align:center;
+    color:white;
+    padding:15px;
+    font-size: 33px;
+  }
+  h2{
+    text-align:center;
+    color:white;
+    padding:15px;
+    font-size: 33px;
+  }
+
+  .sign_up{
+    list-style: none;
+    font-size:20px;
+  }
+    
+     #fb{
+     font-size:40px;
+     text-align:center;
+     color:#fff;
+     }
+     #mail{
+     font-size:40px;
+     text-align:center;
+     
+     color:#fff;
+     }
+     #credit{
+     font-size: 25px;
+     text-align:center;
+     color:#fff;
+     }
+   ul>li>a{
+   text-decoration: none;
+   }
+   button>a{
+     text-decoration: none;
+     color:white;
+   }
+ }
+      </style>
+    </head>
+    <body>
+      <section class="top_nav">
+        <ul>
+          <li class="logo">ElMoynsa </li>
+          </ul>
+          <ul id="log">
+        <li class="sign_up"><a href="sign_up.html">Sign-up   
+        </a></li>
+        <li class="sign_up">|</li>
+         <li class="sign_up"><a href="log-in.html">Log-in
+           </a></li>
+        </ul>
+       
+        <div class="menu_btn" onclick="document.querySelector('.side_nav').classList.toggle('active')"
+        ></div>
+      </section>
+      <div class="side_nav" id="side_nav" style="background: white; box-shadow: 0 3px 20px rgba(0,0,0,0.1); ">
+     <button class="close" onclick="myFunction()"><i class="fa fa-close" style="font-size:25px"></i></button>
+        <ul>
+          <li class="side"><a href="index.html">  Home</a></li>
+            <li class="side"><a href="AvailableRooms.html">Rooms & Offers</a></li>
+            <li class="side"><a href="reservation.html">Reserve</a></li>
+              <li class="side"><a href="about.html">About</a></li>
+        </ul>
+      </div>
+     
+  <br>
+  <div class="promo-container">
+  <div class="promo">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwGpEO7dJIc4Sj75Hx6K2KqSstv-4hzg4xhQ&usqp=CAU" style="width:80%; margin:10%;">
+    <h3>Long Stay Promo</h3>
+<p class="par">Fancy a longer vacation? Feliz Hotel Boracay also offers exclusive room rates for long-stay guests.</p>
+<button class="btn"><a href="reservation.html">Book Now</a></button>
+  </div>
+    <div class="promo">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwGpEO7dJIc4Sj75Hx6K2KqSstv-4hzg4xhQ&usqp=CAU" style="width:80%; margin:10%;">
+      <h3>Combo Meal Promo</h3>
+      <p class="par">Fancy a longer vacation? Feliz Hotel Boracay also offers exclusive room rates for long-stay guests.</p>
+      
+      <button class="btn"><a href="reservation.html">Book Now</a></button>
+      </div>
+          <div class="promo">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwGpEO7dJIc4Sj75Hx6K2KqSstv-4hzg4xhQ&usqp=CAU" style="width:80%; margin:10%;">
+      <h3>Combo Meal Promo</h3>
+      <p class="par">Fancy a longer vacation? Feliz Hotel Boracay also offers exclusive room rates for long-stay guests.</p>
+      <button class="btn"> <a href="reservation.html">Book Now</a> </button>
+      </div>
+      </div>
+      
+      <div class="promo-container1">
+       <div class="promo">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwGpEO7dJIc4Sj75Hx6K2KqSstv-4hzg4xhQ&usqp=CAU" style="width:80%; margin:10%;">
+      <h3>Combo Meal Promo</h3>
+      <p class="par">Fancy a longer vacation? Feliz Hotel Boracay also offers exclusive room rates for long-stay guests.</p>
+      <button class="btn">
+        <a href="reservation.html">Book Now</a>
+      </button>
+       </div>
+           <div class="promo">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwGpEO7dJIc4Sj75Hx6K2KqSstv-4hzg4xhQ&usqp=CAU" style="width:80%; margin:10%;">
+      <h3>Combo Meal Promo</h3>
+      <p class="par">Fancy a longer vacation? Feliz Hotel Boracay also offers exclusive room rates for long-stay guests.</p>
+      <button class="btn">
+        <a href="reservation.html">Book Now</a>
+      </button>
+       </div>
+           <div class="promo">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwGpEO7dJIc4Sj75Hx6K2KqSstv-4hzg4xhQ&usqp=CAU" style="width:80%; margin:10%;">
+      <h3>Combo Meal Promo</h3>
+      <p class="par">Fancy a longer vacation? Feliz Hotel Boracay also offers exclusive room rates for long-stay guests.</p>
+      
+      <button class="btn">
+        <a href="reservation.html">Book Now</a>
+        
+      </button>
+      </div>
+    </div>
+    </div>
+<div class="footer">
+  <p><br>
+  
+ <h2>CONTACT US</h2>
+ <p>
+El Moynsa Hotel
+<br>
+Tapuac, Dagupan City
+<br>
+Philippines 
+<br>
+<br>
+09179*****
+moynsahotel@gmail.com
+ </p>
+<h2>SOCIAL MEDIA</h2>
+<p>
+<i class="fa fa-facebook" id="fb" ><a href=""></a></i>
+<i class="fa fa-envelope-o" id="mail"><a href="moynsa@gmail.com"></a></i>
+</p>
+<p>
+  <i class="fa fa-copyright" id="credit" >Moynsa Hotel</i>
+  </p>
+  </p>
+</div>
+    </body>
+
+<script type="text/javascript" charset="utf-8">
+function $(el) {
+ var element = document.querySelectorAll(el);
+ if(element.length > 1) {
+  return arguments[0];
+ } else {
+  return document.querySelector(el);
+ }
+}
+
+var menu_btn = $(".menu_btn");
+var side_nav = $('.side_nav');
+var close_btn = $('.close');
+
+var isOpen = false;
+menu_btn.onclick = function() {
+ if(!isOpen) {
+  side_nav.style.left = '10%';
+  isOpen = true;
+ } else {
+  side_nav.style.left = '-100vw';
+  isOpen = false;
+ }
+}
+
+close_btn.onclick = function() {
+ side_nav.style.left = '-100vw';
+ isOpen = false;
+}
+</script>
+ 
+  </html>
